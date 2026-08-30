@@ -3115,7 +3115,7 @@
        ctx
        (node->line (:filename ctx) expr
                    :reduce-str
-                   "Prefer `apply str` over `reduce str`")))
+                   "Use `(apply str ...)` or `(str/join ...)`")))
     (concat fana
             (analyze-children ctx f-args false))))
 
