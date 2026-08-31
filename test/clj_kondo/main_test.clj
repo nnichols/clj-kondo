@@ -4267,7 +4267,7 @@ x"
 
 (deftest reduce-str-test
   (is (assert-submaps2
-       '({:file "<stdin>", :row 1, :col 8, :level :warning, :message "Use `(apply str ...)` or `(str/join ...)`"})
+       '({:file "<stdin>", :row 1, :col 1, :level :warning, :message "Use `(apply str ...)` or `(str/join ...)`"})
        (lint! "(reduce str \"\" [1 2 3])" {:linters {:shadowed-fn-param {:level :warning}}})))
   (is (empty? (lint! "#_:clj-kondo/ignore (reduce str \"\" [1 2 3])" {:linters {:shadowed-fn-param {:level :warning}}}))))
 
